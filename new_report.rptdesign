@@ -1,47 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
     <parameters>
         <scalar-parameter name="DateTimeFrom" id="69">
-            <property name="valueType">dynamic</property>
-            <property name="dataSetName">Data Set</property>
-            <expression name="valueExpr" type="javascript">dataSetRow["DATETIME"]</expression>
-            <expression name="labelExpr" type="javascript">dataSetRow["DATETIME"]</expression>
-            <property name="dataType">string</property>
+            <property name="valueType">static</property>
+            <property name="dataType">dateTime</property>
             <property name="distinct">true</property>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
-            <property name="controlType">list-box</property>
-            <property name="mustMatch">false</property>
-            <property name="fixedOrder">true</property>
+            <property name="controlType">text-box</property>
             <structure name="format">
                 <property name="category">Unformatted</property>
             </structure>
         </scalar-parameter>
         <scalar-parameter name="DateTimeTo" id="70">
-            <property name="valueType">dynamic</property>
+            <property name="valueType">static</property>
             <property name="isRequired">true</property>
-            <property name="dataSetName">Data Set</property>
-            <expression name="valueExpr" type="javascript">dataSetRow["DATETIME"]</expression>
-            <expression name="labelExpr" type="javascript">dataSetRow["DATETIME"]</expression>
-            <property name="dataType">string</property>
+            <property name="dataType">dateTime</property>
             <property name="distinct">true</property>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
-            <property name="controlType">list-box</property>
-            <property name="mustMatch">false</property>
-            <property name="fixedOrder">true</property>
+            <property name="controlType">text-box</property>
             <structure name="format">
                 <property name="category">Unformatted</property>
             </structure>
         </scalar-parameter>
     </parameters>
     <data-sources>
-        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="11">
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="71">
+            <text-property name="displayName"></text-property>
             <list-property name="privateDriverProperties">
                 <ex-property>
                     <name>metadataBidiFormatStr</name>
@@ -58,7 +49,7 @@
                     <name>disabledContentBidiFormatStr</name>
                 </ex-property>
             </list-property>
-            <property name="odaDriverClass">com.mysql.cj.jdbc.Driver</property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
             <property name="odaURL">jdbc:mysql://localhost:3306/?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
             <property name="odaUser">root</property>
         </oda-data-source>
@@ -102,7 +93,7 @@
                     <property name="name">param_1</property>
                     <property name="paramName">DateTimeFrom</property>
                     <property name="nativeName"></property>
-                    <property name="dataType">string</property>
+                    <property name="dataType">dateTime</property>
                     <property name="nativeDataType">-1</property>
                     <property name="position">1</property>
                     <property name="isInput">true</property>
@@ -112,7 +103,7 @@
                     <property name="name">param_2</property>
                     <property name="paramName">DateTimeTo</property>
                     <property name="nativeName"></property>
-                    <property name="dataType">string</property>
+                    <property name="dataType">dateTime</property>
                     <property name="nativeDataType">-1</property>
                     <property name="position">2</property>
                     <property name="isInput">true</property>
